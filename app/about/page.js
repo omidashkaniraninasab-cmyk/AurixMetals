@@ -57,7 +57,8 @@ export default function About() {
             src="/images/about-team.jpg"
             alt="تیم AurixMetal"
             fill
-            style={{ objectFit: 'cover' }}
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 50vw"
+            style={{ objectFit: 'contain' }} /* تغییر به contain */
           />
         </div>
         <div className={styles.text}>
