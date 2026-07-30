@@ -3,8 +3,9 @@
 /* ===== هیرو (تمام عرض) ===== */
 .hero {
   position: relative;
-  width: 100vw;        /* ← عرض کامل ویوپورت */
-  height: 100vh;
+  width: 100vw;
+  height: 100vh; /* fallback */
+  height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,14 +18,16 @@
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
+  background-color: #0a0a0a;
 }
 
 .heroImage {
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
   filter: brightness(0.6);
   z-index: 0;
 }
@@ -235,11 +238,53 @@
 }
 
 /* ===== ریسپانسیو ===== */
-@media (min-width: 640px) {
-  .galleryGrid {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 640px) {
+  .hero {
+    height: auto; /* حذف ارتفاع ثابت */
+    aspect-ratio: 960 / 583; /* نسبت دقیق ابعاد عکس شما */
+    width: 100vw;
+    max-height: 90dvh; /* جلوگیری از خیلی بزرگ شدن */
+    background-color: #0a0a0a;
+  }
+  
+  .heroImage {
+    object-fit: contain !important; /* کل عکس بدون برش */
+    object-position: center !important;
+    width: 100% !important;
+    height: 100% !important;
+    filter: brightness(0.5);
+  }
+  
+  .heroTitle {
+    font-size: 1.8rem !important;
+  }
+  
+  .heroSub {
+    font-size: 0.9rem !important;
+  }
+  
+  .heroBtn {
+    padding: 0.5rem 1.8rem;
+    font-size: 0.9rem;
   }
 }
+
+
+@media (max-width: 480px) {
+  .hero {
+    aspect-ratio: 960 / 583; /* ثابت نگه داشتن نسبت */
+    max-height: 85dvh;
+  }
+  
+  .heroTitle {
+    font-size: 1.5rem !important;
+  }
+  
+  .heroSub {
+    font-size: 0.8rem !important;
+  }
+}
+
 
 @media (min-width: 768px) {
   .heroTitle {

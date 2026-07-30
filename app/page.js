@@ -7,26 +7,31 @@ export default function Home() {
   return (
     <>
       {/* ===== هیرو اصلی سایت ===== */}
-      <section className={styles.hero}>
-        <Image
-          src="/images/hero-bg.jpg"
-          alt="کارگاه قالکاری AurixMetals"
-          fill
-          className={styles.heroImage}
-          priority
-        />
-        <div className={styles.heroContent}>
-          <h1 className={styles.heroTitle}>
-            <span>Aurix</span>Metals
-          </h1>
-          <p className={styles.heroSub}>
-            بازیابی طلا و نقره و فلزات گران‌بها از دل ضایعات با بالاترین کیفیت
-          </p>
-          <a href="#services" className={styles.heroBtn}>
-            خدمات ما
-          </a>
-        </div>
-      </section>
+    <section className={styles.hero}>
+  <Image
+    src="/images/hero-bg.jpg"
+    alt="کارگاه قالکاری AurixMetals"
+    fill
+    priority
+    sizes="100vw"
+    className={styles.heroImage}
+    style={{
+      objectFit: 'cover', // این مقدار توسط CSS override می‌شود
+      objectPosition: 'center',
+    }}
+  />
+  <div className={styles.heroContent}>
+    <h1 className={styles.heroTitle}>
+      <span>Aurix</span>Metals
+    </h1>
+    <p className={styles.heroSub}>
+      بازیابی طلا و نقره و فلزات گران‌بها از دل ضایعات با بالاترین کیفیت
+    </p>
+    <a href="#services" className={styles.heroBtn}>
+      خدمات ما
+    </a>
+  </div>
+</section>
 
       {/* ===== کانتینر اصلی محتوا ===== */}
       <div className={styles.container}>
