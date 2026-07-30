@@ -1,0 +1,1751 @@
+/* app/page.module.css */
+
+/* ===== هیرو (تمام عرض) ===== */
+.hero {
+  position: relative;
+  width: 100vw;        /* ← عرض کامل ویوپورت */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.heroImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+  z-index: 0;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 10;
+  padding: 0 1.5rem;
+  max-width: 900px;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  letter-spacing: -0.025em;
+}
+.heroTitle span {
+  color: var(--gold);
+}
+
+.heroSub {
+  font-size: 1.25rem;
+  color: #d1d5db;
+  margin-bottom: 2rem;
+}
+
+.heroBtn {
+  display: inline-block;
+  background-color: var(--gold);
+  color: #1f2937;
+  font-weight: 700;
+  padding: 0.75rem 2.5rem;
+  border-radius: 9999px;
+  font-size: 1.1rem;
+  transition: all 0.3s;
+  box-shadow: 0 8px 20px rgba(234, 179, 8, 0.3);
+}
+.heroBtn:hover {
+  background-color: var(--gold-dark);
+  transform: scale(1.05);
+}
+
+/* ===== کانتینر محدود برای بقیه بخشها ===== */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ===== بقیه استایل‌ها (همون قبلی) ===== */
+.services {
+  padding: 5rem 0;
+}
+
+.sectionTitle {
+  font-size: 2.25rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.serviceGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.serviceCard {
+  background: white;
+  padding: 2rem 1.5rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.3s, transform 0.2s;
+}
+.serviceCard:hover {
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.12);
+  transform: translateY(-5px);
+}
+
+.serviceIcon {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.serviceCard h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.serviceCard p {
+  color: #4b5563;
+  line-height: 1.7;
+}
+
+.gallery {
+  padding: 5rem 0;
+  background-color: white;
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.galleryItem {
+  position: relative;
+  height: 250px;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.galleryItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+.galleryItem:hover img {
+  transform: scale(1.08);
+}
+
+.aboutSummary {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.aboutSummary p {
+  font-size: 1.15rem;
+  line-height: 2;
+  color: #374151;
+  margin-bottom: 2rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.aboutBtn {
+  display: inline-block;
+  border: 2px solid var(--gold);
+  color: var(--gold-dark);
+  font-weight: 600;
+  padding: 0.6rem 2.5rem;
+  border-radius: 9999px;
+  transition: all 0.3s;
+}
+.aboutBtn:hover {
+  background-color: var(--gold);
+  color: #1f2937;
+}
+
+.contact {
+  padding: 5rem 0;
+  background-color: var(--gray-bg);
+}
+
+.contactBox {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+.contactInfo p {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
+.contactInfo span {
+  color: var(--gold);
+  font-size: 1.5rem;
+}
+
+.contactForm input,
+.contactForm textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  background: white;
+}
+.contactForm input:focus,
+.contactForm textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(234, 179, 8, 0.2);
+}
+
+.contactForm button {
+  width: 100%;
+  background-color: var(--gold);
+  color: #1f2937;
+  font-weight: 700;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.75rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.contactForm button:hover {
+  background-color: var(--gold-dark);
+}
+
+/* ===== ریسپانسیو ===== */
+@media (min-width: 640px) {
+  .galleryGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .heroTitle {
+    font-size: 4.5rem;
+  }
+  .serviceGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .contactBox {
+    grid-template-columns: 1fr 1fr;
+    text-align: right;
+  }
+}
+
+@media (min-width: 1024px) {
+  .galleryGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .galleryItem {
+    height: 280px;
+  }
+}
+
+/* ==========================================
+   بخش واحد فرآوری فلزات گرانبها و مزایا
+   ========================================== */
+.processSection {
+  padding: 3rem 0 1.5rem 0;
+}
+
+.processHeader {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.processTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.processSub {
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+.goldDivider {
+  width: 60px;
+  height: 3px;
+  background-color: #c8a051;
+  margin: 0 auto;
+  border-radius: 9999px;
+}
+
+/* کارت‌های سفید */
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .featuresGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.featureCard {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.25rem 1.5rem;
+  border-right: 4px solid #c8a051;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.featureCardHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.featureCardHeader h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+}
+
+.featureCardHeader span {
+  font-size: 1.2rem;
+}
+
+.featureCard p {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* بخش تیره مزیت ما */
+.advantagesBox {
+  background-color: #0b1e19;
+  border-radius: 1.5rem;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 15px 30px rgba(11, 30, 25, 0.25);
+}
+
+@media (min-width: 768px) {
+  .advantagesBox {
+    padding: 2.5rem;
+  }
+}
+
+.advantagesTitle {
+  text-align: center;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #c8a051;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.advantagesList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.advantageItem {
+  background-color: #122a24;
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-right: 4px solid #c8a051;
+  transition: background-color 0.2s ease;
+}
+
+.advantageItem:hover {
+  background-color: #16322b;
+}
+
+.advantageItem span {
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.checkIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #c8a051;
+  flex-shrink: 0;
+}
+
+/* ==========================================
+   ۱. بخش واحد فرآوری فلزات گرانبها
+   ========================================== */
+.processSection {
+  padding: 3rem 0 1.5rem 0;
+}
+
+.processHeader {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.processTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.processSub {
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+.goldDivider {
+  width: 60px;
+  height: 3px;
+  background-color: #c8a051;
+  margin: 0 auto;
+  border-radius: 9999px;
+}
+
+/* کارت‌های سفید ۴ تایی */
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .featuresGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.featureCard {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.25rem 1.5rem;
+  border-right: 4px solid #c8a051;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.featureCardHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.featureCardHeader h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+}
+
+.featureCardHeader span {
+  font-size: 1.2rem;
+}
+
+.featureCard p {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* بخش تیره مزیت ما */
+.advantagesBox {
+  background-color: #0b1e19;
+  border-radius: 1.5rem;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 15px 30px rgba(11, 30, 25, 0.25);
+}
+
+@media (min-width: 768px) {
+  .advantagesBox {
+    padding: 2.5rem;
+  }
+}
+
+.advantagesTitle {
+  text-align: center;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #c8a051;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.advantagesList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.advantageItem {
+  background-color: #122a24;
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-right: 4px solid #c8a051;
+  transition: background-color 0.2s ease;
+}
+
+.advantageItem:hover {
+  background-color: #16322b;
+}
+
+.advantageItem span {
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.checkIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #c8a051;
+  flex-shrink: 0;
+}
+
+
+/* ==========================================
+   ۲. بخش مراحل کار (عکس اول)
+   ========================================== */
+.stepsSection {
+  padding: 3rem 0;
+}
+
+.stepsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.stepRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.stepCard {
+  flex: 1;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.25rem 1.5rem;
+  border-right: 4px solid #c8a051;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.stepCard h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 0.4rem 0;
+}
+
+.stepCard p {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.stepBadge {
+  width: 46px;
+  height: 46px;
+  background-color: #c8a051;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 800;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(200, 160, 81, 0.35);
+}
+
+
+/* ==========================================
+   ۳. بخش چرا با ما کار کنید؟ (عکس دوم)
+   ========================================== */
+.whyUsSection {
+  padding: 3rem 0;
+}
+
+.whyUsGrid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .whyUsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.whyUsCard {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
+  border-top: 4px solid #c8a051;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whyUsCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.whyUsIconBox {
+  width: 52px;
+  height: 52px;
+  background-color: #f8f4eb;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  color: #c8a051;
+}
+
+.whyUsIconBox svg {
+  width: 26px;
+  height: 26px;
+}
+
+.whyUsCard h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 0.5rem 0;
+}
+
+.whyUsCard p {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.6;
+}
+
+
+/* ==========================================
+   ۴. بخش شروع همکاری (عکس سوم)
+   ========================================== */
+.ctaSection {
+  padding: 3rem 0;
+}
+
+.ctaBox {
+  background-color: #0b1e19;
+  border-radius: 1.5rem;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 15px 30px rgba(11, 30, 25, 0.25);
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #c8a051;
+  margin: 0 0 0.5rem 0;
+}
+
+.ctaSub {
+  font-size: 0.95rem;
+  color: #e2e8f0;
+  margin-bottom: 2rem;
+}
+
+.ctaPhoneList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.ctaPhoneItem {
+  background-color: #122a24;
+  border: 1px solid #1b3b33;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  color: #c8a051;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+  text-decoration: none;
+}
+
+.ctaPhoneItem:hover {
+  border-color: #c8a051;
+  background-color: #16322b;
+}
+
+.ctaPhoneIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.freeConsultCard {
+  background-color: #c8a051;
+  color: #0b1e19;
+  border-radius: 1rem;
+  padding: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.freeConsultCard h4 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin: 0 0 0.3rem 0;
+}
+
+.freeConsultCard p {
+  font-size: 0.85rem;
+  margin: 0;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+.ctaLogoBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.ctaLogoBox svg {
+  width: 44px;
+  height: 44px;
+  color: #c8a051;
+}
+
+.ctaLogoText {
+  color: #c8a051;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* ==========================================
+   استایل‌های کاتالوگ جدید
+   ========================================== */
+
+/* بنر عنوان تیره (سبز یشمی) */
+.bannerHeader {
+  background-color: #0b1e19;
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 15px rgba(11, 30, 25, 0.2);
+}
+
+.bannerHeader h2 {
+  color: #ffffff;
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+/* کارت‌های سبز نعنایی (روشن) */
+.mintCard {
+  background-color: #eef8f5;
+  border: 1.5px solid #2dd4bf;
+  border-radius: 1rem;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.mintCard h3, .mintCard h4 {
+  color: #0b1e19;
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin: 0 0 0.5rem 0;
+}
+
+.mintCard p {
+  color: #374151;
+  font-size: 0.88rem;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.mintCardFlex {
+  flex: 1;
+  background-color: #eef8f5;
+  border: 1.5px solid #2dd4bf;
+  border-radius: 1rem;
+  padding: 1.25rem 1.5rem;
+}
+
+.mintCardFlex h4 {
+  color: #0b1e19;
+  font-size: 1.05rem;
+  font-weight: 800;
+  margin: 0 0 0.4rem 0;
+}
+
+.mintCardFlex p {
+  color: #374151;
+  font-size: 0.85rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* بنر طلایی برجسته */
+.goldBanner {
+  background-color: #c8a051;
+  border-radius: 1rem;
+  padding: 1rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.goldBanner p {
+  color: #0b1e19;
+  font-weight: 800;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.sectionTitleCenter {
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #111827;
+  margin: 1.5rem 0 1rem 0;
+}
+
+/* --- کاور کاتالوگ و کارت تماس نهایی --- */
+.catalogCoverSection, .finalContactSection {
+  padding: 2rem 0;
+}
+
+.catalogCoverBox {
+  background-color: #0b1e19;
+  border-radius: 1.5rem;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  color: #ffffff;
+  max-width: 650px;
+  margin: 0 auto;
+  box-shadow: 0 15px 30px rgba(11, 30, 25, 0.3);
+}
+
+.catalogBrandEn {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #c8a051;
+  margin: 0.5rem 0 0.2rem 0;
+  font-family: serif;
+}
+
+.catalogBrandFa {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.catalogTagline {
+  color: #2dd4bf;
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin: 1rem 0 0.2rem 0;
+}
+
+.catalogSubTagline {
+  color: #2dd4bf;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+}
+
+.catalogDesc {
+  font-size: 0.95rem;
+  color: #e2e8f0;
+  margin: 0 0 0.2rem 0;
+}
+
+.catalogMetalsText {
+  font-size: 0.9rem;
+  color: #e2e8f0;
+  margin: 0 0 1.5rem 0;
+}
+
+.catalogPhoneBox {
+  background-color: #c8a051;
+  color: #0b1e19;
+  border-radius: 1rem;
+  padding: 1rem;
+  max-width: 380px;
+  margin: 0 auto;
+  font-weight: 800;
+}
+
+.catalogPhoneBox p {
+  margin: 0.2rem 0;
+  font-size: 1.1rem;
+}
+
+.contactTitleGreen {
+  color: #2dd4bf;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 1rem 0 1.5rem 0;
+}
+
+.phoneNumbers {
+  font-size: 1.25rem !important;
+  letter-spacing: 0.05em;
+}
+
+.emailBoxOutline {
+  border: 1.5px solid #2dd4bf;
+  border-radius: 1rem;
+  padding: 1rem;
+  max-width: 380px;
+  margin: 1rem auto 0 auto;
+}
+
+.emailBoxOutline p {
+  color: #2dd4bf;
+  font-weight: 700;
+  margin: 0 0 0.3rem 0;
+}
+
+.emailBoxOutline a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+/* --- شبکه فلزات (طلا، نقره، پلاتین، پالادیوم) --- */
+.metalsSection, .catalogAboutSection, .methodsSection, .cooperationStepsSection, .whyChooseSection {
+  padding: 2rem 0;
+}
+
+.metalsGrid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .metalsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.metalCard {
+  border-radius: 1.25rem;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.metalIcon {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.metalCard h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin: 0 0 0.5rem 0;
+}
+
+.metalCard p {
+  font-size: 0.85rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* رنگ کارت طلا */
+.goldMetal {
+  background: linear-gradient(135deg, #d4af37, #fef3c7);
+  color: #451a03;
+}
+
+/* رنگ کارت نقره */
+.silverMetal {
+  background: linear-gradient(135deg, #cbd5e1, #f8fafc);
+  color: #0f172a;
+}
+
+/* رنگ کارت پلاتین */
+.platinumMetal {
+  background: linear-gradient(135deg, #38bdf8, #e0f2fe);
+  color: #0369a1;
+}
+
+/* رنگ کارت پالادیوم */
+.palladiumMetal {
+  background: linear-gradient(135deg, #f472b6, #fce7f3);
+  color: #831843;
+}
+
+/* --- شبکه‌های کارت‌های کوچک (چرا ما و درباره ما) --- */
+.mintGridCard {
+  background-color: #eef8f5;
+  border: 1.5px solid #2dd4bf;
+  border-radius: 1rem;
+  padding: 1.25rem 1rem;
+  text-align: center;
+}
+
+.gridEmoji {
+  font-size: 1.8rem;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.mintGridCard h4 {
+  color: #0b1e19;
+  font-size: 1rem;
+  font-weight: 800;
+  margin: 0 0 0.3rem 0;
+}
+
+.mintGridCard p {
+  color: #4b5563;
+  font-size: 0.8rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.grid3Cols {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .grid3Cols {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* --- گام‌های همکاری --- */
+.coopStepRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.coopStepBadge {
+  width: 44px;
+  height: 44px;
+  background-color: #2dd4bf;
+  color: #0b1e19;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+/* ==========================================
+   کارت‌ها و بنرهای پروموشن و تبلیغاتی جدید
+   ========================================== */
+
+.promoSection {
+  padding: 1.5rem 0;
+}
+
+/* کارت تیره پروموشن */
+.darkPromoCard {
+  background-color: #0b1e19;
+  border-radius: 1.5rem;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto;
+  box-shadow: 0 12px 25px rgba(11, 30, 25, 0.25);
+}
+
+.promoLogoText {
+  color: #c8a051;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-top: 0.3rem;
+}
+
+.promoLogoTextDark {
+  color: #0b1e19;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-top: 0.3rem;
+}
+
+.promoBulletList {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.promoBulletList p {
+  color: #c8a051;
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.goldCheck {
+  color: #c8a051;
+  font-weight: 900;
+}
+
+/* کارت کرم روشن پروموشن */
+.creamPromoCard {
+  background-color: #f8f6f0;
+  border-radius: 1.5rem;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.promoTitleCenter {
+  color: #0b1e19;
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 1rem 0 1.5rem 0;
+}
+
+.darkInnerCard {
+  background-color: #0b1e19;
+  border: 2px solid #c8a051;
+  border-radius: 1.25rem;
+  padding: 1.75rem 1.25rem;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.darkInnerCard p {
+  margin: 0;
+}
+
+.goldTextHighlight {
+  color: #c8a051;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.goldHighlightCenter {
+  color: #c8a051;
+  font-size: 1.15rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+/* کارت هشدار هدر رفت طلا */
+.darkPromoCardAlert {
+  background-color: #0b1e19;
+  border-radius: 1.5rem;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.warningBox {
+  margin: 1.5rem 0;
+}
+
+.goldLargePercent {
+  color: #c8a051;
+  font-size: 3rem;
+  font-weight: 900;
+  margin: 0 0 0.5rem 0;
+}
+
+.whiteAlertText {
+  color: #ffffff;
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.warningDetailBox {
+  margin-top: 2rem;
+}
+
+.whiteSubText {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.goldGramText {
+  color: #c8a051;
+  font-size: 2.8rem;
+  font-weight: 900;
+  margin: 0.3rem 0;
+}
+
+.redAlertText {
+  color: #ef4444;
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+/* جدول مقایسه VS */
+.vsGrid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .vsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.vsGreenCard {
+  background-color: #0b1e19;
+  border: 2px solid #c8a051;
+  border-radius: 1rem;
+  padding: 1.5rem 1rem;
+  color: #ffffff;
+  text-align: right;
+}
+
+.vsGreenCard h4 {
+  color: #2dd4bf;
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin: 0 0 1rem 0;
+  text-align: center;
+}
+
+.vsGreenCard ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.vsRedCard {
+  background-color: #0b1e19;
+  border: 2px solid #ef4444;
+  border-radius: 1rem;
+  padding: 1.5rem 1rem;
+  color: #ffffff;
+  text-align: right;
+}
+
+.vsRedCard h4 {
+  color: #ef4444;
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin: 0 0 1rem 0;
+  text-align: center;
+}
+
+.vsRedCard ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* شبکه بنرهای طلایی و سوالی */
+.goldCardsGrid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.25rem;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.darkCardAsk {
+  background-color: #0b1e19;
+  border-radius: 1.25rem;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  color: #c8a051;
+}
+
+.goldQuestionText {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+.goldBannerCard {
+  background-color: #c8a051;
+  color: #0b1e19;
+  border-radius: 1.25rem;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.goldBannerCard h2 {
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin: 0.5rem 0;
+}
+
+.goldBannerCard h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.darkSubText {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.darkBigText {
+  font-size: 2.2rem;
+  font-weight: 900;
+  margin: 0.4rem 0;
+}
+
+.darkBigPercent {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin: 0.2rem 0;
+}
+
+.darkCardTransparency {
+  background-color: #0b1e19;
+  border-radius: 1.25rem;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.goldInnerBox {
+  border: 2px solid #ffffff;
+  background-color: #c8a051;
+  color: #0b1e19;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.goldInnerBox h4 {
+  font-size: 1.4rem;
+  font-weight: 900;
+  margin: 0;
+}
+
+.goldContactBar {
+  background-color: #c8a051;
+  color: #0b1e19;
+  border-radius: 1rem;
+  padding: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.goldContactBar p {
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin: 0 0 0.4rem 0;
+}
+
+.goldContactBar h3 {
+  font-size: 1.25rem;
+  font-weight: 900;
+  margin: 0;
+  letter-spacing: 0.05em;
+}
+
+/* ==========================================
+   استایل پوستر قالکاری تخصصی (تصویر جدید)
+   ========================================== */
+
+.posterSection {
+  padding: 2.5rem 0;
+}
+
+.posterCard {
+  background-color: #081613;
+  border-radius: 1.5rem;
+  padding: 2.5rem 1.5rem;
+  color: #ffffff;
+  border: 1px solid #1c3d35;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+/* هدر پوستر */
+.posterHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .posterHeader {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.posterLogoSide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.posterDiamondSvg {
+  width: 50px;
+  height: 50px;
+  color: #c8a051;
+}
+
+.posterBrandEn {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #c8a051;
+  margin: 0.3rem 0 0 0;
+  font-family: serif;
+}
+
+.posterBrandFa {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.posterTitleSide {
+  text-align: center;
+  flex: 1;
+}
+
+@media (min-width: 768px) {
+  .posterTitleSide {
+    text-align: right;
+  }
+}
+
+.posterMainTitle {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #c8a051;
+  margin: 0 0 0.3rem 0;
+}
+
+.posterSubTitle {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 0.75rem 0;
+}
+
+.posterDesc {
+  font-size: 0.95rem;
+  color: #e2e8f0;
+  margin-top: 0.75rem;
+}
+
+/* بنر تخفیف ۱۰٪ */
+.offerBanner {
+  background-color: #0e2722;
+  border: 1.5px solid #c8a051;
+  border-radius: 1.25rem;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.offerBadge {
+  width: 60px;
+  height: 60px;
+  background-color: #c8a051;
+  color: #081613;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(200, 160, 81, 0.4);
+}
+
+.offerBadge span {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.offerBadge small {
+  font-size: 0.65rem;
+}
+
+.offerTextGroup h3 {
+  color: #c8a051;
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin: 0 0 0.25rem 0;
+}
+
+.offerTextGroup p {
+  color: #ffffff;
+  font-size: 0.88rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* ۶ آیکون ویژگی‌ها */
+.sixBadgesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 640px) {
+  .sixBadgesGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .sixBadgesGrid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+
+.badgeItem {
+  background-color: #0e2722;
+  border: 1px solid #1c3d35;
+  border-radius: 0.85rem;
+  padding: 1rem 0.6rem;
+  text-align: center;
+}
+
+.badgeEmoji {
+  font-size: 1.5rem;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.badgeItem h4 {
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 800;
+  margin: 0 0 0.2rem 0;
+}
+
+.badgeItem p {
+  color: #9ca3af;
+  font-size: 0.72rem;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* دو ستون پایین */
+.posterTwoColumns {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .posterTwoColumns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.columnBox {
+  background-color: #0e2722;
+  border-radius: 1rem;
+  padding: 1.25rem;
+  border: 1px solid #1c3d35;
+}
+
+.columnHeaderBadge {
+  background-color: #c8a051;
+  color: #081613;
+  font-size: 0.95rem;
+  font-weight: 800;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.checkListGrid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.checkListGrid li {
+  color: #e2e8f0;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.fourMetalsRow {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.5rem;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.metalMiniItem span {
+  font-size: 1.8rem;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.metalMiniItem p {
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* فوتر آدرس و تلفن */
+.posterFooter {
+  background-color: #050e0c;
+  border-radius: 1rem;
+  padding: 1.25rem;
+  border: 1px solid #1c3d35;
+}
+
+.footerContacts {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+  .footerContacts {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.footerPhoneGroup p, .footerAddressGroup p {
+  color: #c8a051;
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin: 0.2rem 0;
+  letter-spacing: 0.03em;
+}
+
+.sloganBar {
+  border-top: 1px solid #1c3d35;
+  padding-top: 0.75rem;
+  text-align: center;
+  color: #c8a051;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
