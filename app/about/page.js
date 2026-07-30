@@ -5,7 +5,7 @@ import styles from './page.module.css';
 export default function About() {
   return (
     <section className={styles.aboutPage}>
-      <h1 className={styles.title}>درباره AurixMetal</h1>
+      <h1 className={styles.title}>درباره AurixMetals</h1>
         {/* --- بخش ۳: درباره ما --- */}
         <section className={styles.catalogAboutSection}>
           <div className={styles.bannerHeader}>
@@ -13,7 +13,7 @@ export default function About() {
           </div>
 
           <div className={styles.mintCard}>
-            <h3>Aurix Metals - اوریکس متالز</h3>
+            <h3>AurixMetals - اوریکس متالز</h3>
             <p>
               با بهره‌گیری از جدیدترین تکنولوژی‌های روز دنیا و تیمی مجرب، خدمات جامع فرآوری و استحصال فلزات گرانبها را ارائه می‌دهد. ما با افتخار می‌توانیم ادعا کنیم که نه تنها آنالیز ارائه می‌دهیم، بلکه فلز خالص را در کف دست شما قرار می‌دهیم.
             </p>
@@ -63,7 +63,7 @@ export default function About() {
         </div>
         <div className={styles.text}>
           <p>
-            <strong>AurixMetal</strong> در سال ۱۳۹۵ با هدف ارائه خدمات حرفه‌ای در
+            <strong>AurixMetals</strong> در سال ۱۳۹۵ با هدف ارائه خدمات حرفه‌ای در
             زمینه قالکاری و بازیافت فلزات گرانبها تأسیس شد. تیم ما متشکل از
             کارشناسان مجرب شیمی و متالورژی است که با استفاده از کوره‌های مدرن و
             مواد شیمیایی باکیفیت، بهترین بازدهی را برای مشتریان خود فراهم می‌کنند.
