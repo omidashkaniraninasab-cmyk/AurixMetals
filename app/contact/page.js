@@ -24,7 +24,7 @@ export default function ContactPage() {
               <span className={styles.infoIcon}>📍</span>
               <div>
                 <strong>آدرس کارخانه:</strong>
-                <p>تهران ، بزرگراه خلیج فارس نرسیده به فرودگاه امام خمینی  خروجی رباط کریم ، وهن آباد ، علی آباد ، خیابان کوثر ، کارخانه AurixMetals</p>
+                <p>تهران ، بزرگراه خلیج فارس نرسیده به فرودگاه امام خمینی  خروجی رباط کریم وهن آباد ، علی آباد ، خیابان کوثر ، کارخانه AurixMetals</p>
               </div>
             </div>
 
@@ -126,7 +126,7 @@ export default function ContactPage() {
         <div className={styles.mapSection}>
           <h3>موقعیت مکانی ما</h3>
           <div className={styles.mapPlaceholder}>
-            <p>📍تهران ، بزرگراه خلیج فارس نرسیده به فرودگاه امام خمینی ، خروجی رباط کریم ، وهن آباد ، علی آباد ، خیابان کوثر ، کارخانه AurixMetals</p>
+            <p>📍تهران ، بزرگراه خلیج فارس نرسیده به فرودگاه امام خمینی ، خروجی رباط کریم وهن آباد ، علی آباد ، خیابان کوثر ، کارخانه AurixMetals</p>
             <p className={styles.mapNote}>
               برای دریافت مسیر دقیق، با ما تماس بگیرید
             </p>
