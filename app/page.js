@@ -10,7 +10,7 @@ export default function Home() {
     <section className={styles.hero}>
   <Image
     src="/images/hero-bg.jpg"
-    alt="کارگاه قالکاری AurixMetals"
+    alt="کارخانه قالکاری AurixMetals"
     fill
     priority
     sizes="100vw"
@@ -27,9 +27,9 @@ export default function Home() {
     <p className={styles.heroSub}>
       بازیابی طلا و نقره و فلزات گران‌بها از دل ضایعات با بالاترین کیفیت
     </p>
-    <a href="#services" className={styles.heroBtn}>
+   {/*  <a href="#services" className={styles.heroBtn}>
       خدمات ما
-    </a>
+    </a>*/}
   </div>
 </section>
 
@@ -39,7 +39,7 @@ export default function Home() {
         {/* --- بخش ۱: واحد فرآوری فلزات گرانبها --- */}
         <section className={styles.processSection}>
           <div className={styles.processHeader}>
-            <h2 className={styles.processTitle}>واحد پیشرفته فرآوری فلزات گرانبها</h2>
+            <h2 className={styles.processTitle}>کارخانه پیشرفته فرآوری فلزات گرانبها</h2>
             <p className={styles.processSub}>خدمات تخصصی قالکاری با بالاترین استانداردها</p>
             <div className={styles.goldDivider}></div>
           </div>
@@ -167,47 +167,65 @@ export default function Home() {
           </div>
         </section>
 
-         {/* --- فلزات قابل فرآوری --- */}
-        <section className={styles.metalsSection}>
-          <div className={styles.bannerHeader}>
-            <h2>♨️ فلزات قابل فرآوری</h2>
-          </div>
+      {/* --- فلزات قابل فرآوری --- */}
+<section className={styles.metalsSection}>
+  <div className={styles.bannerHeader}>
+    <h2>♨️ فلزات قابل فرآوری</h2>
+  </div>
 
-          <div className={styles.metalsGrid}>
-            <div className={`${styles.metalCard} ${styles.goldMetal}`}>
-              <div className={styles.metalIcon}>🥇</div>
-              <h3>طلا (Gold)</h3>
-              <p>استحصال و خالص‌سازی با بالاترین راندمان و خلوص استاندارد بین‌المللی</p>
-            </div>
+  <div className={styles.metalsGrid}>
+    <div className={`${styles.metalCard} ${styles.goldMetal}`}>
+      <div className={styles.metalIcon}>🥇</div>
+      <h3>طلا (Gold)</h3>
+      <p>استحصال و خالص‌سازی با بالاترین راندمان و خلوص استاندارد بین‌المللی</p>
+    </div>
 
-            <div className={`${styles.metalCard} ${styles.silverMetal}`}>
-              <div className={styles.metalIcon}>🥈</div>
-              <h3>نقره (Silver)</h3>
-              <p>فرآوری نقره با خلوص بالا و کیفیت تضمین شده برای مصارف صنعتی و زیورآلات</p>
-            </div>
+    <div className={`${styles.metalCard} ${styles.silverMetal}`}>
+      <div className={styles.metalIcon}>🥈</div>
+      <h3>نقره (Silver)</h3>
+      <p>فرآوری نقره با خلوص بالا و کیفیت تضمین شده برای مصارف صنعتی و زیورآلات</p>
+    </div>
 
-            <div className={`${styles.metalCard} ${styles.platinumMetal}`}>
-              <div className={styles.metalIcon}>💠</div>
-              <h3>پلاتین (Platinum)</h3>
-              <p>استحصال تخصصی پلاتین با روش‌های پیشرفته برای کاربردهای صنعتی و تخصصی</p>
-            </div>
+    <div className={`${styles.metalCard} ${styles.platinumMetal}`}>
+      <div className={styles.metalIcon}>💠</div>
+      <h3>پلاتین (Platinum)</h3>
+      <p>استحصال تخصصی پلاتین با روش‌های پیشرفته برای کاربردهای صنعتی و تخصصی</p>
+    </div>
 
-            <div className={`${styles.metalCard} ${styles.palladiumMetal}`}>
-              <div className={styles.metalIcon}>💜</div>
-              <h3>پالادیوم (Palladium)</h3>
-              <p>فرآوری حرفه‌ای پالادیوم برای صنایع الکترونیک، خودرو و کاتالیست‌ها</p>
-            </div>
-          </div>
+    <div className={`${styles.metalCard} ${styles.palladiumMetal}`}>
+      <div className={styles.metalIcon}>💜</div>
+      <h3>پالادیوم (Palladium)</h3>
+      <p>فرآوری حرفه‌ای پالادیوم برای صنایع الکترونیک، خودرو و کاتالیست‌ها</p>
+    </div>
 
-          <div className={styles.mintCard}>
-            <h4>استانداردهای بین‌المللی ✨</h4>
-            <p>تمامی فلزات با رعایت کامل استانداردهای بین‌المللی فرآوری می‌شوند و گواهینامه‌های معتبر خلوص صادر می‌گردد.</p>
-          </div>
+    <div className={`${styles.metalCard} ${styles.rhodiumMetal}`}>
+      <div className={styles.metalIcon}>🔷</div>
+      <h3>رودیوم (Rhodium)</h3>
+      <p>فرآوری تخصصی رودیوم با خلوص بالا برای صنایع کاتالیست، جواهرسازی و الکترونیک</p>
+    </div>
+  </div>
 
-          <div className={styles.goldBanner}>
-            <p>🔥 بازیابی ۹۵-۹۹٪ فلزات با خلوص بالا</p>
-          </div>
-        </section>
+  {/* ===== ردیف جدید: جداسازی سنگ جواهر از طلای سفید ===== */}
+  <div className={styles.gemstoneRow}>
+    <div className={styles.gemstoneIcon}>💎</div>
+    <div className={styles.gemstoneContent}>
+      <h3>جداسازی سنگ جواهر از طلای سفید</h3>
+      <p>
+        خدمات تخصصی جداسازی و بازیابی سنگ‌های قیمتی از طلای سفید و سایر آلیاژهای گرانبها 
+        با دقت بالا و حفظ کیفیت سنگ‌ها
+      </p>
+    </div>
+  </div>
+
+  <div className={styles.mintCard}>
+    <h4>استانداردهای بین‌المللی ✨</h4>
+    <p>تمامی فلزات با رعایت کامل استانداردهای بین‌المللی فرآوری می‌شوند و گواهینامه‌های معتبر خلوص صادر می‌گردد.</p>
+  </div>
+
+  <div className={styles.goldBanner}>
+    <p>🔥 بازیابی ۹۵-۹۹٪ فلزات با خلوص بالا</p>
+  </div>
+</section>
 
          {/* --- چرا اوریکس متالز؟ --- */}
         <section className={styles.whyChooseSection}>

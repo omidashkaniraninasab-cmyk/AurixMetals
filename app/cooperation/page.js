@@ -36,11 +36,11 @@ export default function CooperationPage() {
             <div className={styles.stepRow}>
               <div className={styles.stepBadge}>۲</div>
               <div className={styles.stepCard}>
-                <h3>ارسال نمونه (۵ کیلوگرم تا ۱ تن) 📦</h3>
+                <h3>ارسال نمونه (۱۰  کیلوگرم تا ۱ تن) 📦</h3>
                 <p>نمونه خود را برای آزمایش و بررسی به واحد ما ارسال کنید. نمونه‌برداری اصولی با حضور شما یا نماینده‌تان انجام می‌شود.</p>
                 <div className={styles.stepDetail}>
-                  <span>📦 حداقل نمونه: ۵ کیلوگرم</span>
-                  <span>🔬 آنالیز اولیه رایگان</span>
+                  <span>📦  حداقل نمونه: ۱۰  کیلوگرم و برای فاز صنعتی یک تن</span>
+                  <span>🔬 آنالیز اولیه </span>
                 </div>
               </div>
             </div>

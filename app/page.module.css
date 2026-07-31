@@ -7,7 +7,7 @@
   height: 100vh; /* fallback */
   height: 100dvh;
   display: flex;
-  align-items: center;
+ align-items: flex-start; /* تغییر از center به flex-start */
   justify-content: center;
   text-align: center;
   color: white;
@@ -40,10 +40,11 @@
 }
 
 .heroTitle {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 800;
   margin-bottom: 1rem;
   letter-spacing: -0.025em;
+   line-height: 1.2; /* برای جلوگیری از هم‌پوشانی در اندازه‌های بزرگ */
 }
 .heroTitle span {
   color: var(--gold);
@@ -256,7 +257,7 @@
   }
   
   .heroTitle {
-    font-size: 1.8rem !important;
+    font-size: 2.8rem !important;
   }
   
   .heroSub {
@@ -277,7 +278,7 @@
   }
   
   .heroTitle {
-    font-size: 1.5rem !important;
+    font-size: 2.2rem !important;
   }
   
   .heroSub {
@@ -288,7 +289,7 @@
 
 @media (min-width: 768px) {
   .heroTitle {
-    font-size: 4.5rem;
+    font-size: 6rem;
   }
   .serviceGrid {
     grid-template-columns: repeat(3, 1fr);
@@ -305,6 +306,10 @@
   }
   .galleryItem {
     height: 280px;
+  }
+
+   .heroTitle {
+    font-size: 7rem; /* افزایش بیشتر برای نمایشگرهای بزرگ */
   }
 }
 
@@ -1094,6 +1099,21 @@
   color: #831843;
 }
 
+/* ===== کارت رودیوم (جدید) ===== */
+.rhodiumMetal {
+  background: linear-gradient(135deg, #b4cdd8, #e0f2fe);
+  color: #0c4a6e;
+  
+}
+
+.rhodiumMetal h3 {
+  color: #0c4a6e;
+}
+
+.rhodiumMetal p {
+  color: #0c4a6e;
+}
+
 /* --- شبکه‌های کارت‌های کوچک (چرا ما و درباره ما) --- */
 .mintGridCard {
   background-color: #eef8f5;
@@ -1128,6 +1148,81 @@
   grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 1rem;
   margin-bottom: 1.25rem;
+}
+
+/* ===== ردیف جداسازی سنگ جواهر از طلای سفید ===== */
+.gemstoneRow {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+  border-radius: 1.25rem;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.5rem;
+  border-right: 5px solid #c8a051;
+  box-shadow: 0 6px 20px rgba(200, 160, 81, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.gemstoneRow:hover {
+  transform: translateX(4px);
+}
+
+.gemstoneIcon {
+  font-size: 3rem;
+  flex-shrink: 0;
+  animation: sparkle 2s infinite ease-in-out;
+}
+
+@keyframes sparkle {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.1) rotate(10deg); }
+}
+
+.gemstoneContent {
+  flex: 1;
+}
+
+.gemstoneContent h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #451a03;
+  margin: 0 0 0.4rem 0;
+}
+
+.gemstoneContent p {
+  font-size: 0.95rem;
+  color: #78350f;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ===== ریسپانسیو برای موبایل ===== */
+@media (max-width: 640px) {
+  .gemstoneRow {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.25rem;
+    gap: 0.75rem;
+  }
+  
+  .gemstoneIcon {
+    font-size: 2.5rem;
+  }
+  
+  .gemstoneContent h3 {
+    font-size: 1.1rem;
+  }
+  
+  .gemstoneContent p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .metalsGrid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
 }
 
 @media (min-width: 640px) {
