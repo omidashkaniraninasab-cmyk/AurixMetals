@@ -154,7 +154,7 @@ export default function CooperationPage() {
               <span className={styles.conditionIcon}>✅</span>
               <div>
                 <h4>حداقل حجم قابل قبول</h4>
-                <p>۵ کیلوگرم برای نمونه‌های آزمایشی و ۵۰ کیلوگرم برای فاز صنعتی</p>
+                <p>۱۰ کیلوگرم برای نمونه‌های آزمایشی و ۱۰۰۰ کیلوگرم برای فاز صنعتی</p>
               </div>
             </div>
 

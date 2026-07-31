@@ -52,38 +52,43 @@ export default function About() {
           </div>
         </section>
       <div className={styles.card}>
-        <div className={styles.imageWrapper}>
-          <Image
-            src="/images/about-team.jpg"
-            alt="تیم AurixMetal"
-            fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 50vw"
-            style={{ objectFit: 'contain' }} /* تغییر به contain */
-          />
-        </div>
+     <div className={styles.imageWrapper}>
+  <Image
+    src="/images/about-team.jpg"
+    alt="تیم AurixMetal"
+    fill
+    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 50vw"
+    style={{ 
+      objectFit: 'cover',
+      objectPosition: 'center',
+      width: '100%',
+      height: '100%'
+    }}
+  />
+</div>
         <div className={styles.text}>
           <p>
-            <strong>AurixMetals</strong> در سال ۱۳۹۵ با هدف ارائه خدمات حرفه‌ای در
+            <strong>AurixMetals</strong> در سال ۱۳۹۱ با هدف ارائه خدمات حرفه‌ای در
             زمینه قالکاری و بازیافت فلزات گرانبها تأسیس شد. تیم ما متشکل از
             کارشناسان مجرب شیمی و متالورژی است که با استفاده از کوره‌های مدرن و
             مواد شیمیایی باکیفیت، بهترین بازدهی را برای مشتریان خود فراهم می‌کنند.
           </p>
           <p>
             ما به محیط‌زیست اهمیت می‌دهیم و فرآیندهای ما به‌گونه‌ای طراحی شده که
-            کمترین آلایندگی را داشته باشد. تا امروز موفق به بازیابی بیش از ۵۰۰
+            کمترین آلایندگی را داشته باشد. تا امروز موفق به بازیابی بیش از ۱۰۰۰
             کیلوگرم طلا و نقره از ضایعات صنعتی شده‌ایم.
           </p>
           <div className={styles.stats}>
             <div className={styles.statBox}>
-              <p className={styles.statNumber}>+۵۰۰</p>
+              <p className={styles.statNumber}>۱۰۰۰+</p>
               <p className={styles.statLabel}>کیلوگرم طلا و نقره</p>
             </div>
             <div className={styles.statBox}>
-              <p className={styles.statNumber}>۱۰۰٪</p>
+              <p className={styles.statNumber}>٪۱۰۰</p>
               <p className={styles.statLabel}>رضایت مشتریان</p>
             </div>
             <div className={styles.statBox}>
-              <p className={styles.statNumber}>۸</p>
+              <p className={styles.statNumber}>۱۴ </p>
               <p className={styles.statLabel}>سال تجربه</p>
             </div>
           </div>

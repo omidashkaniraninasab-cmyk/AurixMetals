@@ -23,15 +23,21 @@
 .imageWrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 3 / 4; /* نسبت دقیق عکس ۹۶۰:۱۲۸۰ = ۳:۴ */
+  height: 0;
+  padding-top: 114%; /* (1044 ÷ 960) × 100 = 108.75% */
   border-radius: 1.5rem;
   overflow: hidden;
   margin-bottom: 2rem;
-  background-color: #f3f4f6; /* پس‌زمینه برای مواقعی که حاشیه وجود دارد */
+  background-color: #f3f4f6;
 }
 
 .imageWrapper img {
-  object-fit: contain !important; /* نمایش کامل عکس بدون برش */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
   object-position: center !important;
 }
 
