@@ -2,6 +2,13 @@
 import Link from 'next/link';
 import styles from './page.module.css';
 
+
+export const metadata = {
+  title: 'همکاری | خدمات تخصصی قالکاری و آنالیز فلزات گرانبها | AurixMetals',
+  description: 'همکاری با AurixMetals در زمینه قالکاری طلا، آنالیز Fire Assay، استحصال و بازیابی پلاتین، پالادیوم و سایر فلزات گرانبها.',
+};
+
+
 export default function CooperationPage() {
   return (
     <section className={styles.cooperationPage}>

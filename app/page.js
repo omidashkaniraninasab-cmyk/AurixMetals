@@ -6,6 +6,31 @@ import styles from './page.module.css';
 export default function Home() {
   return (
     <>
+     {/* ===== ساختار داده JSON-LD برای سئو ===== */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "AurixMetals",
+            "description": "خدمات تخصصی قالکاری طلا، آنالیز عیار فلزات گرانبها با روش Fire Assay، استحصال و بازیابی طلا، نقره، پلاتین و پالادیوم",
+            "keywords": "قالکاری طلا, Fire Assay, آنالیز فلزات گرانبها, استحصال طلا, بازیابی فلزات گرانبها",
+            "url": "https://aurixmetals.ir",
+            "telephone": "+98-9120336514",
+            "email": "info@aurixmetals.com",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "بزرگراه خلیج فارس، خروجی رباط کریم وهن آباد، علی آباد، خیابان کوثر",
+              "addressLocality": "تهران",
+              "addressCountry": "IR"
+            },
+            "openingHours": "Sa-Th 08:00-18:00",
+            "priceRange": "$$"
+          })
+        }}
+      />
+      
       {/* ===== هیرو اصلی سایت ===== */}
     <section className={styles.hero}>
   <Image
@@ -22,11 +47,11 @@ export default function Home() {
   />
   <div className={styles.heroContent}>
     <h1 className={styles.heroTitle}>
-      <span>Aurix</span>Metals
-    </h1>
-    <p className={styles.heroSub}>
-      بازیابی طلا و نقره و فلزات گران‌بها از دل ضایعات با بالاترین کیفیت
-    </p>
+  <span>Aurix</span>Metals
+</h1>
+<p className={styles.heroSub}>
+  خدمات تخصصی <strong>قالکاری طلا</strong> و <strong>آنالیز فلزات گرانبها</strong> با روش <strong>Fire Assay</strong>
+</p>
    {/*  <a href="#services" className={styles.heroBtn}>
       خدمات ما
     </a>*/}
@@ -113,26 +138,32 @@ export default function Home() {
         </section>
 
          {/* --- خدمات اصلی --- */}
-        <section id="services" className={styles.services}>
-          <h2 className={styles.sectionTitle}>چه کاری انجام می‌دهیم؟</h2>
-          <div className={styles.serviceGrid}>
-            <div className={styles.serviceCard}>
-              <div className={styles.serviceIcon}>🔥</div>
-              <h3>ذوب و جداسازی</h3>
-              <p>استفاده از کوره‌های پیشرفته برای جداسازی فلزات گرانبها از ناخالصی‌ها</p>
-            </div>
-            <div className={styles.serviceCard}>
-              <div className={styles.serviceIcon}>⚗️</div>
-              <h3>تصفیه شیمیایی</h3>
-              <p>عملیات اسیدکاری و تیزابکاری برای دستیابی به طلا و نقره با خلوص بالا</p>
-            </div>
-            <div className={styles.serviceCard}>
-              <div className={styles.serviceIcon}>♻️</div>
-              <h3>بازیافت ضایعات</h3>
-              <p>جمع‌آوری و بازیافت طلا از بردهای الکترونیکی، خاک معادن و پسماندها</p>
-            </div>
-          </div>
-        </section>
+       <section id="services" className={styles.services}>
+  <h2 className={styles.sectionTitle}>چه کاری انجام می‌دهیم؟</h2>
+  <div className={styles.serviceGrid}>
+    <div className={styles.serviceCard}>
+      <div className={styles.serviceIcon}>🔥</div>
+      <h3>ذوب و جداسازی</h3>
+      <p>استفاده از کوره‌های پیشرفته برای جداسازی فلزات گرانبها از ناخالصی‌ها</p>
+    </div>
+    <div className={styles.serviceCard}>
+      <div className={styles.serviceIcon}>⚗️</div>
+      <h3>تصفیه شیمیایی</h3>
+      <p>عملیات اسیدکاری و تیزابکاری برای دستیابی به طلا و نقره با خلوص بالا</p>
+    </div>
+    <div className={styles.serviceCard}>
+      <div className={styles.serviceIcon}>♻️</div>
+      <h3>بازیافت ضایعات</h3>
+      <p>جمع‌آوری و بازیافت طلا از بردهای الکترونیکی، خاک معادن و پسماندها</p>
+    </div>
+    {/* ===== کارت جدید با کلمات کلیدی ===== */}
+    <div className={styles.serviceCard}>
+      <div className={styles.serviceIcon}>🔬</div>
+      <h3>قالکاری طلا با روش Fire Assay</h3>
+      <p>تعیین عیار طلا، نقره، پلاتین و پالادیوم با دقت بالا</p>
+    </div>
+  </div>
+</section>
 
          {/* --- روش‌های فرآوری --- */}
         <section className={styles.methodsSection}>

@@ -2,6 +2,13 @@
 import Image from 'next/image';
 import styles from './page.module.css';
 
+
+export const metadata = {
+  title: 'درباره ما | تخصص در قالکاری و آنالیز فلزات گرانبها | AurixMetals',
+  description: 'آشنایی با تیم متخصص AurixMetals در زمینه قالکاری طلا، آنالیز عیار، Fire Assay و فرآوری فلزات گرانبها.',
+};
+
+
 export default function About() {
   return (
     <section className={styles.aboutPage}>

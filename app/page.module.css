@@ -126,6 +126,34 @@
   line-height: 1.7;
 }
 
+/* ===== ریسپانسیو ===== */
+
+/* تبلت: ۲ ستون */
+@media (min-width: 640px) {
+  .serviceGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* دسکتاپ کوچک: ۳ ستون */
+@media (min-width: 768px) {
+  .serviceGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* دسکتاپ بزرگ: ۴ ستون (برای نمایش هر ۴ کارت در یک ردیف) */
+@media (min-width: 1024px) {
+  .serviceGrid {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1.5rem;
+  }
+  .serviceCard {
+    flex: 1;
+  }
+}
+
 .gallery {
   padding: 5rem 0;
   background-color: white;

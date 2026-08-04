@@ -12,8 +12,12 @@ const vazirmatn = Vazirmatn({
 });
 
 export const metadata = {
-  title: 'قالکاری اوریکس متال',
-  description: ' کارگاه قالکاری',
+  title: {
+    default: 'قالکاری طلا و فلزات گرانبها | خدمات تخصصی Fire Assay و آنالیز عیار | AurixMetals',
+    template: '%s | AurixMetals'
+  },
+  description: 'خدمات تخصصی قالکاری طلا، آنالیز عیار طلا، نقره، پلاتین و پالادیوم با روش Fire Assay. استحصال و بازیابی فلزات گرانبها از خاک، سنگ معدن و کنسانتره با بالاترین کیفیت.',
+  keywords: 'قالکاری طلا، خدمات قالکاری، آزمایش قالکاری، آنالیز عیار طلا، Fire Assay، فایر اسی، آنالیز فلزات گرانبها، استحصال طلا، بازیابی طلا، قالکاری خاک طلا، آزمایشگاه طلا، تعیین عیار طلا، آنالیز پلاتین، آنالیز پالادیوم، آزمایش Fire Assay',
 };
 
 export default function RootLayout({ children }) {

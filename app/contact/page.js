@@ -1,6 +1,11 @@
 // app/contact/page.js
 import styles from './page.module.css';
 
+export const metadata = {
+  title: 'تماس با ما | قالکاری طلا و خدمات Fire Assay | AurixMetals',
+  description: 'ارتباط با تیم متخصص AurixMetals برای انجام قالکاری طلا، آنالیز عیار، آزمایش Fire Assay و خدمات فرآوری فلزات گرانبها.',
+};
+
 export default function ContactPage() {
   return (
     <section className={styles.contactPage}>
@@ -122,16 +127,27 @@ export default function ContactPage() {
           </div>
         </div>
 
-        {/* نقشه یا موقعیت مکانی (اختیاری) */}
-        <div className={styles.mapSection}>
-          <h3>موقعیت مکانی ما</h3>
-          <div className={styles.mapPlaceholder}>
-            <p>📍تهران ، بزرگراه خلیج فارس نرسیده به فرودگاه امام خمینی ، خروجی رباط کریم وهن آباد ، علی آباد ، خیابان کوثر ، کارخانه AurixMetals</p>
-            <p className={styles.mapNote}>
-              برای دریافت مسیر دقیق، با ما تماس بگیرید
-            </p>
-          </div>
-        </div>
+{/* ===== نقشه موقعیت مکانی ===== */}
+<section className={styles.mapSection}>
+  <h3>📍 موقعیت مکانی ما</h3>
+  <div className={styles.mapContainer}>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d203.1485110902733!2d51.180335547316616!3d35.445480380100484!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f920561c4082f83%3A0x9589e0bbf4d222d9!2zQzVXSis2NTYsIEFsaXnEgWLEgWQsIFRlaHJhbiBQcm92aW5jZSwgSXJhbg!5e0!3m2!1sen!2sus!4v1785874396075!5m2!1sen!2sus"
+      width="100%"
+      height="400"
+      style={{ border: 0 }}
+      allowFullScreen=""
+      loading="lazy"
+      referrerPolicy="strict-origin-when-cross-origin"
+      title="نقشه کارگاه AurixMetals"
+    ></iframe>
+  </div>
+  <div style={{ marginTop: '1.5rem' }}>
+    <p style={{ margin: 0 }}>
+      📍 تهران، بزرگراه خلیج فارس نرسیده به فرودگاه امام خمینی، خروجی رباط کریم وهن آباد، علی آباد، خیابان کوثر، کارخانه AurixMetals
+    </p>
+  </div>
+</section>
       </div>
     </section>
   );
