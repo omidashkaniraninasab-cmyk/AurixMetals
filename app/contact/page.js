@@ -1,0 +1,154 @@
+// app/contact/page.js
+import styles from './page.module.css';
+
+export const metadata = {
+  title: 'تماس با ما | قالکاری طلا و خدمات Fire Assay | AurixMetals',
+  description: 'ارتباط با تیم متخصص AurixMetals برای انجام قالکاری طلا، آنالیز عیار، آزمایش Fire Assay و خدمات فرآوری فلزات گرانبها.',
+};
+
+export default function ContactPage() {
+  return (
+    <section className={styles.contactPage}>
+      <div className={styles.contactContainer}>
+        {/* هدر صفحه */}
+        <div className={styles.contactHeader}>
+          <h1 className={styles.contactTitle}>تماس با ما</h1>
+          <div className={styles.goldDivider}></div>
+          <p className={styles.contactSubtitle}>
+            برای مشاوره، همکاری و یا هرگونه سوال، با ما در تماس باشید
+          </p>
+        </div>
+
+        {/* دو ستون اطلاعات و فرم */}
+        <div className={styles.contactBox}>
+          {/* ستون اطلاعات تماس */}
+          <div className={styles.contactInfo}>
+            <h3>اطلاعات تماس</h3>
+            
+            <div className={styles.infoItem}>
+              <span className={styles.infoIcon}>📍</span>
+              <div>
+                <strong>آدرس کارخانه:</strong>
+                <p>تهران ، بزرگراه خلیج فارس نرسیده به فرودگاه امام خمینی  خروجی رباط کریم وهن آباد ، علی آباد ، خیابان کوثر ، کارخانه AurixMetals</p>
+              </div>
+            </div>
+
+            <div className={styles.infoItem}>
+              <span className={styles.infoIcon}>📞</span>
+              <div>
+                <strong>شماره تماس</strong>
+                <p>۰۹۱۲۰۳۳۶۵۱۴</p>
+                <p>۰۹۱۲۴۵۹۰۹۹۵</p>
+              </div>
+            </div>
+
+            <div className={styles.infoItem}>
+              <span className={styles.infoIcon}>✉️</span>
+              <div>
+                <strong>ایمیل</strong>
+                <p>info@aurixmetals.com</p>
+              </div>
+            </div>
+
+            <div className={styles.infoItem}>
+              <span className={styles.infoIcon}>🕐</span>
+              <div>
+                <strong>ساعات کاری</strong>
+                <p>شنبه تا چهارشنبه: ۸ صبح تا ۶ عصر</p>
+                <p>پنجشنبه: ۸ صبح تا ۲ ظهر</p>
+              </div>
+            </div>
+
+            {/* بنر تماس فوری */}
+            <div className={styles.quickContactBox}>
+              <p>📞 تماس فوری</p>
+              <a href="tel:09120336514" className={styles.phoneLink}>۰۹۱۲۰۳۳۶۵۱۴</a>
+              <a href="tel:09124590995" className={styles.phoneLink}>۰۹۱۲۴۵۹۰۹۹۵</a>
+            </div>
+          </div>
+
+          {/* ستون فرم تماس */}
+          <div className={styles.contactFormWrapper}>
+            <h3>ارسال پیام</h3>
+            <form className={styles.contactForm}>
+              <div className={styles.formGroup}>
+                <label htmlFor="name">نام و نام خانوادگی</label>
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="نام خود را وارد کنید"
+                  required
+                />
+              </div>
+
+              <div className={styles.formGroup}>
+                <label htmlFor="email">ایمیل</label>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="ایمیل خود را وارد کنید"
+                  required
+                />
+              </div>
+
+              <div className={styles.formGroup}>
+                <label htmlFor="phone">شماره تماس (اختیاری)</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  placeholder="شماره تماس خود را وارد کنید"
+                />
+              </div>
+
+              <div className={styles.formGroup}>
+                <label htmlFor="subject">موضوع</label>
+                <input
+                  type="text"
+                  id="subject"
+                  placeholder="موضوع پیام را وارد کنید"
+                  required
+                />
+              </div>
+
+              <div className={styles.formGroup}>
+                <label htmlFor="message">پیام شما</label>
+                <textarea
+                  id="message"
+                  rows="5"
+                  placeholder="پیام خود را بنویسید..."
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" className={styles.submitBtn}>
+                ارسال پیام
+              </button>
+            </form>
+          </div>
+        </div>
+
+{/* ===== نقشه موقعیت مکانی ===== */}
+<section className={styles.mapSection}>
+  <h3>📍 موقعیت مکانی ما</h3>
+  <div className={styles.mapContainer}>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d203.1485110902733!2d51.180335547316616!3d35.445480380100484!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f920561c4082f83%3A0x9589e0bbf4d222d9!2zQzVXSis2NTYsIEFsaXnEgWLEgWQsIFRlaHJhbiBQcm92aW5jZSwgSXJhbg!5e0!3m2!1sen!2sus!4v1785874396075!5m2!1sen!2sus"
+      width="100%"
+      height="400"
+      style={{ border: 0 }}
+      allowFullScreen=""
+      loading="lazy"
+      referrerPolicy="strict-origin-when-cross-origin"
+      title="نقشه کارگاه AurixMetals"
+    ></iframe>
+  </div>
+  <div style={{ marginTop: '1.5rem' }}>
+    <p style={{ margin: 0 }}>
+      📍 تهران، بزرگراه خلیج فارس نرسیده به فرودگاه امام خمینی، خروجی رباط کریم وهن آباد، علی آباد، خیابان کوثر، کارخانه AurixMetals
+    </p>
+  </div>
+</section>
+      </div>
+    </section>
+  );
+}

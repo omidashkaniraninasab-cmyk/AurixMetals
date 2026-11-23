@@ -1,0 +1,49 @@
+/* app/globals.css */
+
+/* تعریف متغیرهای رنگ (هماهنگ با تم طلایی) */
+:root {
+  --gold: #eab308;
+  --gold-dark: #ca8a04;
+  --gold-light: #fef08a;
+  --gray-bg: #f3f4f6;
+  --white: #ffffff;
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* اعمال فونت Vazirmatn به کل صفحات */
+body {
+  font-family: var(--font-vazirmatn), system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9fafb;
+  color: #1f2937;
+  direction: rtl;
+  line-height: 1.6;
+}
+
+/* حذف استایل‌های پیش‌فرض */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+* {
+   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* کلاس مخصوص محتوای اصلی بین هدر و فوتر */
+.main-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  min-height: 70vh; /* برای فاصله مناسب */
+}
+
+/* ریسپانسیو برای موبایل */
+@media (max-width: 640px) {
+  .main-container {
+    padding: 0 0.75rem;
+  }
+}
