@@ -19,6 +19,13 @@ body {
   color: #1f2937;
   direction: rtl;
   line-height: 1.6;
+  overflow-x: hidden;      /* ← اضافه شد */
+  max-width: 100%;          /* ← اضافه شد */
+}
+
+html {
+  overflow-x: hidden;       /* ← اضافه شد */
+  max-width: 100%;          /* ← اضافه شد */
 }
 
 /* حذف استایل‌های پیش‌فرض */
@@ -28,9 +35,15 @@ a {
 }
 
 * {
-   margin: 0;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/* جلوگیری از سرریز تصاویر و ویدیوها */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
 }
 
 /* کلاس مخصوص محتوای اصلی بین هدر و فوتر */
@@ -38,7 +51,7 @@ a {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 1rem;
-  min-height: 70vh; /* برای فاصله مناسب */
+  min-height: 70vh;
 }
 
 /* ریسپانسیو برای موبایل */
